@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import { HeaderContainer,Logo,Nav,PushButton } from './styles/namepage.styles';
+import { HeaderContainer,Logo,Nav,PushButton } from './styles/head.styles';
 
 const Header:React.FC = () => {
   const router = useRouter();
