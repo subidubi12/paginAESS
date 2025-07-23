@@ -1,17 +1,12 @@
+"use client"
 import React from 'react';
-import { Container, Navbar, ContentWrapper, MainSection, Title, BlueBox, Gallery, ImageBox } from "./styles/sobrenos.styles";
-
+import Header from './header';
+import { Container,ContentWrapper, MainSection, Title, BlueBox, Gallery, ImageBox } from "./styles/sobrenos.styles";
 const SobreNosotros: React.FC = () => {
   return (
+  <>
+    <Header/>
     <Container>
-      <Navbar>
-        <div>INICIO</div>
-        <div>SOBRE NOSOTROS</div>
-        <div>ACTIVIDAESS</div>
-        <div>CURIOSIDAESS</div>
-        <div>CALENDARIO</div>
-      </Navbar>
-
       <MainSection>
         <Title>sobre nosotros</Title>
         <ContentWrapper>
@@ -47,6 +42,7 @@ const SobreNosotros: React.FC = () => {
         </ContentWrapper>
       </MainSection>
     </Container>
+  </>
   );
 };
 

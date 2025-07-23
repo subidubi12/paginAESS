@@ -9,15 +9,6 @@ export const Container = styled.div`
   min-height: 100vh;
 `;
 
-export const Navbar = styled.nav`
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #0f1e3a;
-  font-weight: bold;
-  gap: 2rem;
-`;
-
 export const MainSection = styled.section`
   display: flex;
   flex-direction: column;
