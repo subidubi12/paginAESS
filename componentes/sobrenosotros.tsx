@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Navbar, ContentWrapper, MainSection, Title, BlueBox, Gallery, ImageBox } from "./styles/namepage.styles";
+import { Container, Navbar, ContentWrapper, MainSection, Title, BlueBox, Gallery, ImageBox } from "./styles/sobrenos.styles";
 
 const SobreNosotros: React.FC = () => {
   return (

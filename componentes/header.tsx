@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import styled from 'styled-components';
 
 const HeaderContainer = styled.header`
@@ -58,11 +59,10 @@ const PushButton = styled.button`
 `;
 
 const Header = () => {
-  const scrollToSection = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
+  const router = useRouter();
+
+  const navigateToPage = (path: string) => {
+    router.push(path);
   };
 
   return (
@@ -71,11 +71,11 @@ const Header = () => {
         <img src="/logo-aess.svg" alt="AESS Logo" />
       </Logo>
       <Nav>
-        <PushButton onClick={() => scrollToSection("inicio")}>INICIO</PushButton>
-        <PushButton onClick={() => scrollToSection("sobre-nosotros")}>SOBRE NOSOTROS</PushButton>
-        <PushButton onClick={() => scrollToSection("actividades")}>ACTIVIDADES</PushButton>
-        <PushButton onClick={() => scrollToSection("curiosidades")}>CURIOSIDADES</PushButton>
-        <PushButton onClick={() => scrollToSection("calendario")}>CALENDARIO</PushButton>
+        <PushButton onClick={() => navigateToPage("/")}>INICIO</PushButton>
+        <PushButton onClick={() => navigateToPage("/sobrenosotros")}>SOBRE NOSOTROS</PushButton>
+        <PushButton onClick={() => navigateToPage("/actividades")}>ACTIVIDADES</PushButton>
+        <PushButton onClick={() => navigateToPage("/curiosidades")}>CURIOSIDADES</PushButton>
+        <PushButton onClick={() => navigateToPage("/calendario")}>CALENDARIO</PushButton>
       </Nav>
     </HeaderContainer>
   );
